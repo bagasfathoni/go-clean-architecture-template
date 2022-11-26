@@ -1,9 +1,9 @@
 package repository
 
-import "github.com/bagasfathoni/go-clean-architecture-template/model/entity"
+import "github.com/bagasfathoni/go-clean-architecture-template/model"
 
 type aRepository struct {
-	repo entity.A
+	repo model.A
 }
 
 type ARepository interface {
@@ -14,7 +14,7 @@ func (a *aRepository) Foo() {
 	panic("needs implementation")
 }
 
-func InitARepository(a entity.A) ARepository {
+func InitARepository(a model.A) ARepository {
 	aRepo := new(aRepository)
 	aRepo.repo = a
 	return aRepo
