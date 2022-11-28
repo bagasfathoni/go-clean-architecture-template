@@ -25,6 +25,7 @@ type AController interface {
 
 func (a *aController) CreateNewA(c *gin.Context) {
 	var newA model.A
+
 	if err := c.ShouldBindJSON(&newA); err != nil {
 		BadRequestErrorWithMessage(c, err.Error())
 		return
