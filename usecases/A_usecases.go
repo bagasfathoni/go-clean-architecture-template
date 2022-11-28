@@ -85,6 +85,6 @@ func (a *aUsecases) UpdateStatusById(id int) error {
 
 }
 
-func InitCustomerUsecases(a repository.ARepository) AUsecases {
+func InitAUsecases(a repository.ARepository) AUsecases {
 	return &aUsecases{aRepo: a}
 }
